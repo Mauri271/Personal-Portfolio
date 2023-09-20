@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle, rgba(3,1,43,1) 0%, rgba(11,11,100,1) 35%, rgba(7,14,82,1) 100%);
+}
+
+
+
+/* NAVIGATION BAR */
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+
+li{
+    padding: 0 1rem 0 1rem;
+    font-size: large;
+}
+
+/*----------------------------------------------- */
+
+/* GENERAL SECTIONS AND MAIN */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    margin: 2rem;
+    background-color: rgb(17,30,49);
+    border-radius: 15px;    
+    padding: 1rem;
+}
+
+/* ----------------------------------------------- */
+
+#firstSection{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#personal_picture{
+    width: 30%;
+}
+
+#personal_logo{
+    width: 70%;
+}
+
+img{
+    width: 100%;
+}
+
+/* ---------------------------------------------------------- */
+
+/* SECOND SECTION */
+
+#personal_information{
+    background-color: rgb(17,30,49);
+    padding: 4rem;
+}
+
+.information__paragraphs, p{
+    font-size: 1.5rem;
+    color: white;
+}
+
+a{
+    color: rgb(134, 174, 187);
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+}
+
+a:hover{
+    border-bottom: 1.5px solid rgb(135, 44, 220);
+}
+
+/* TECHNLOGIES SECTION */
+
+
+#icons_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.icons{
+    margin: 1.2rem;
+    padding: 0.5rem;
+}
+
+.icons:hover{
+    border: 1px solid rgb(6, 6, 152);
+    border-radius: 20px;
+}
+
+h2{
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+
+.loader{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: spin 1.2s
+    linear infinite;
+    top:50%;
+    left: 50%;
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loader::before, .loader::after{
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+}
+
+.loader::before{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, #f0c 0%, #80f 100%);
+}
+
+.loader::after{
+    width: 85%;
+    height: 85%;
+    background: radial-gradient(circle, rgba(3,1,43,1) 0%, rgba(11,11,100,1) 35%, rgba(7,14,82,1) 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
