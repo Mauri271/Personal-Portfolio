@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
-    background: radial-gradient(circle, rgba(3, 1, 43, 1) 0%, rgba(11, 11, 100, 1) 35%, rgba(7, 14, 82, 1) 100%);
+    background: radial-gradient(circle, rgb(13, 6, 145) 0%, rgb(20, 20, 153) 35%, rgba(7, 14, 82, 1) 100%);
 }
 
 
@@ -17,6 +18,8 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem;
+    overflow: hidden;
+    align-items: center;
 }
 
 ul {
@@ -42,7 +45,7 @@ main {
     align-items: center;
 }
 
-section {
+section, nav {
     margin: 2rem;
     background-color: rgb(17, 30, 49);
     border-radius: 15px;
@@ -78,6 +81,11 @@ img {
 #personal_information {
     background-color: rgb(17, 30, 49);
     padding: 4rem;
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: none;
 }
 
 .information__paragraphs,
@@ -86,13 +94,15 @@ p {
     color: white;
 }
 
-a {
+li>a {
     color: rgb(134, 174, 187);
     border-bottom: 1px solid transparent;
     text-decoration: none;
+    padding: 14px;
+    text-decoration: none;
 }
 
-a:hover {
+li>a:hover {
     border-bottom: 1.5px solid rgb(135, 44, 220);
 }
 
@@ -103,16 +113,28 @@ a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .icons {
-    margin: 1.2rem;
-    padding: 0.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    position: relative;
 }
 
-.icons:hover {
-    border: 1px solid rgb(6, 6, 152);
-    border-radius: 20px;
+.description {
+    position: absolute; /* Cambia la posición a fija para superponer a todo */
+    width: 180%;
+    left: -15px;
+    background-color: burlywood;
+    z-index: 9999; /* Un valor alto para asegurarse de que esté por encima de todo lo demás */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.description p {
+    font-size: 16px;
+    
 }
 
 h2 {
@@ -120,6 +142,7 @@ h2 {
     padding: 2rem;
     text-align: center;
 }
+
 
 
 
@@ -163,3 +186,5 @@ h2 {
 html {
     scroll-behavior: smooth;
 }
+
+
