@@ -81,6 +81,11 @@ img {
 #personal_information {
     background-color: rgb(17, 30, 49);
     padding: 4rem;
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: none;
 }
 
 .information__paragraphs,
@@ -89,7 +94,7 @@ p {
     color: white;
 }
 
-a {
+li>a {
     color: rgb(134, 174, 187);
     border-bottom: 1px solid transparent;
     text-decoration: none;
@@ -97,7 +102,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+li>a:hover {
     border-bottom: 1.5px solid rgb(135, 44, 220);
 }
 
