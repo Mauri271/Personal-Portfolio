@@ -1,28 +1,23 @@
-const inventory = [
-    { name: "asparagus", type: "vegetables", quantity: 5 },
-    { name: "bananas", type: "fruit", quantity: 0 },
-    { name: "goat", type: "meat", quantity: 23 },
-    { name: "cherries", type: "fruit", quantity: 5 },
-    { name: "fish", type: "meat", quantity: 22 },
-  ];
-  
+const technologies = document.querySelectorAll(".icons")
 
-const result = Object.groupBy(inventory, ({quantity}) => quantity)
 
-console.log(result)
+technologies.forEach( t => {
+    t.addEventListener("mouseover", () => {
 
-/* Result is:
-{
-  vegetables: [
-    { name: 'asparagus', type: 'vegetables', quantity: 5 },
-  ],
-  fruit: [
-    { name: "bananas", type: "fruit", quantity: 0 },
-    { name: "cherries", type: "fruit", quantity: 5 }
-  ],
-  meat: [
-    { name: "goat", type: "meat", quantity: 23 },
-    { name: "fish", type: "meat", quantity: 22 }
-  ]
-}
-*/
+        const description =  t.getAttribute("title");
+
+        let child =  document.createElement("div");
+        child.className = "description";
+
+        let paragraph = document.createElement("p");
+        paragraph.textContent = description; 
+
+        child.appendChild(paragraph);
+        
+        t.appendChild(child)
+
+        t.addEventListener("mouseout", () =>{
+            t.removeChild(child)
+        })
+    })
+})
