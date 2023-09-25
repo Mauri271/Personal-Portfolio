@@ -32,7 +32,6 @@ ul {
 li {
     padding: 0 1rem 0 1rem;
     font-size: large;
-    border: 1px solid red;
 }
 
 /*----------------------------------------------- */
@@ -119,12 +118,23 @@ li>a:hover {
 
 .icons {
     margin: 1rem;
-    padding: 0.5rem;
+    padding: 1rem;
+    position: relative;
 }
 
-.icons:hover {
-    border: 1px solid rgb(6, 6, 152);
-    border-radius: 20px;
+.description {
+    position: absolute; /* Cambia la posición a fija para superponer a todo */
+    width: 180%;
+    left: -15px;
+    background-color: burlywood;
+    z-index: 9999; /* Un valor alto para asegurarse de que esté por encima de todo lo demás */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.description p {
+    font-size: 16px;
+    
 }
 
 h2 {
@@ -177,13 +187,4 @@ html {
     scroll-behavior: smooth;
 }
 
-.description {
-    position: absolute;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    max-width: 200px; /* Ancho máximo del pop-up */
-}
+

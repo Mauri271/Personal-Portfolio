@@ -4,13 +4,15 @@ const technologies = document.querySelectorAll(".icons")
 technologies.forEach( t => {
     t.addEventListener("mouseover", () => {
 
-        const description =  t.getAttribute("title");
+        const description =  t.getAttribute("information");
+        
+        
 
         let child =  document.createElement("div");
         child.className = "description";
 
         let paragraph = document.createElement("p");
-        paragraph.textContent = description; 
+        paragraph.textContent = description;
 
         child.appendChild(paragraph);
         
